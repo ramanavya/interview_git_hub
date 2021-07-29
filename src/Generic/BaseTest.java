@@ -4,8 +4,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
+import org.openqa.selenium.firefox.FirefoxDriver;
+//import org.testng.ITestResult;
+//import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
@@ -22,15 +23,16 @@ public class BaseTest implements IAutoconstant
 		if(browser_name.equals("chrome"))
 		{
 			driver=new ChromeDriver();	
+			driver=new FirefoxDriver();
 		}
 		driver.manage().window().maximize();
-		
 		driver.manage().timeouts().implicitlyWait(Wait_time,TimeUnit.SECONDS);
 	}
 	@BeforeMethod()
 	public void Login_to_application()
 	{
 		driver.get(url);
+		System.out.println(driver.getTitle());
 	}
 	
 	/*@AfterMethod()
