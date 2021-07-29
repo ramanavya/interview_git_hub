@@ -25,7 +25,7 @@ public class BaseTest implements IAutoconstant
 		{
 			driver=new ChromeDriver();	
 			driver=new FirefoxDriver();
-			driver=new InternetExplorerDriver();
+			
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Wait_time,TimeUnit.SECONDS);
