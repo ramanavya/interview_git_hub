@@ -5,6 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 //import org.testng.ITestResult;
 //import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -24,6 +25,7 @@ public class BaseTest implements IAutoconstant
 		{
 			driver=new ChromeDriver();	
 			driver=new FirefoxDriver();
+			driver=new InternetExplorerDriver();
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Wait_time,TimeUnit.SECONDS);
