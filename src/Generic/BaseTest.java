@@ -24,6 +24,8 @@ public class BaseTest implements IAutoconstant
 			driver=new ChromeDriver();	
 		}
 		driver.manage().window().maximize();
+		System.out.println("hello ");
+		System.out.println("this is project");
 		driver.manage().timeouts().implicitlyWait(Wait_time,TimeUnit.SECONDS);
 	}
 	@BeforeMethod()
