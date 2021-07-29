@@ -22,7 +22,7 @@ public class BaseTest implements IAutoconstant
 		if(browser_name.equals("chrome"))
 		{
 			driver=new ChromeDriver();
-			System.out.println("Hello")
+			
 		}
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Wait_time,TimeUnit.SECONDS);
@@ -31,7 +31,7 @@ public class BaseTest implements IAutoconstant
 	public void Login_to_application()
 	{
 		driver.get(url);
-		System.out.println(driver.getTitle());
+		
 	}
 	
 	/*@AfterMethod()
