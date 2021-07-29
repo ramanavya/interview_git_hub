@@ -25,6 +25,7 @@ public class BaseTest implements IAutoconstant
 		{
 			driver=new ChromeDriver();	
 			driver=new FirefoxDriver();
+			System.out.println("hello");
 			
 		}
 		driver.manage().window().maximize();
